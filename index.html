@@ -185,26 +185,6 @@
 
     .card-title em { font-style: italic; }
 
-    .card-title-vertical {
-      position: absolute;
-      bottom: 4rem;
-      left: 50%;
-      transform: translateX(-50%) rotate(-90deg);
-      transform-origin: center center;
-      font-family: var(--serif);
-      font-size: 1rem;
-      font-weight: 300;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      color: rgba(255,255,255,0.35);
-      opacity: 1;
-      transition: opacity 0.3s ease;
-    }
-
-    .cards:has(.card:hover) .card-title-vertical { opacity: 1; }
-    .card:hover .card-title-vertical { opacity: 0; pointer-events: none; }
-
     /* ── DYNAMIC EXTENSION EXPANDED DETAILS ── */
     .card-expanded {
       opacity: 0;
@@ -284,7 +264,6 @@
       .cards:has(.card:hover) .card { flex: none; height: 65vh; }
       .cards:has(.card:hover) .card-content { opacity: 1 !important; }
       .card-content { padding: 2rem; }
-      .card-title-vertical { display: none; }
       .card-expanded { opacity: 1; transform: none; pointer-events: auto; max-height: none; margin-top: 1rem; }
       .card-video { opacity: 0.35 !important; }
     }
@@ -312,7 +291,6 @@
         <div class="card-bg"></div>
         <video class="card-video" src="https://assets.mixkit.co/videos/preview/mixkit-woman-posing-in-neon-light-42312-large.mp4" loop muted playsinline></video>
         <div class="card-content">
-          <div class="card-title-vertical">About</div>
           <p class="card-number">01</p>
           <h2 class="card-title">About<br /><em>Linda.</em></h2>
           <div class="card-expanded">
@@ -333,7 +311,6 @@
         <div class="card-bg"></div>
         <video class="card-video" src="https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-with-a-blue-sky-43187-large.mp4" loop muted playsinline></video>
         <div class="card-content">
-          <div class="card-title-vertical">Marketing</div>
           <p class="card-number">02</p>
           <h2 class="card-title">Online<br /><em>Marketing.</em></h2>
           <div class="card-expanded">
@@ -361,7 +338,6 @@
         <div class="card-bg"></div>
         <video class="card-video" src="https://assets.mixkit.co/videos/preview/mixkit-rotating-tech-device-pod-41566-large.mp4" loop muted playsinline></video>
         <div class="card-content">
-          <div class="card-title-vertical">She Shapes</div>
           <p class="card-number">03</p>
           <h2 class="card-title">She<br /><em>Shapes.</em></h2>
           <div class="card-expanded">
@@ -382,7 +358,6 @@
         <div class="card-bg"></div>
         <video class="card-video" src="https://assets.mixkit.co/videos/preview/mixkit-extreme-close-up-of-womans-lips-blinking-43112-large.mp4" loop muted playsinline></video>
         <div class="card-content">
-          <div class="card-title-vertical">Links & Projects</div>
           <p class="card-number">04</p>
           <h2 class="card-title">Links &<br /><em>Projects.</em></h2>
           <div class="card-expanded">
@@ -403,7 +378,6 @@
         <div class="card-bg"></div>
         <video class="card-video" src="https://assets.mixkit.co/videos/preview/mixkit-headlights-of-a-car-parked-underground-42791-large.mp4" loop muted playsinline></video>
         <div class="card-content">
-          <div class="card-title-vertical">Photography</div>
           <p class="card-number">05</p>
           <h2 class="card-title">Hospitality<br /><em>Photography.</em></h2>
           <div class="card-expanded">
