@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Services | Milow Studios</title>
+  <meta name="description" content="Copywriting, Design & Strategy for boutique brands and founders. Premium digital presence and inbound inquiries without wasting your time." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #000000;
+      --dark-grey: #0a0a0a;
+      --card-bg: #121212;
+      --border-color: rgba(255,255,255,0.1);
+      --white: #f7f6f4;
+      --muted-white: rgba(255,255,255,0.6);
+      --accent: #d2ff1f; 
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --transition: 0.4s cubic-bezier(0.25, 1, 0.3, 1);
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ── HEADER NAVIGATION ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 3rem;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+      backdrop-filter: blur(5px);
+    }
+
+    .nav-logo {
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .nav-links { display: flex; gap: 2.5rem; }
+    .nav-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted-white);
+      transition: color 0.3s;
+    }
+    .nav-link:hover { color: var(--accent); }
+
+    /* ── HERO SECTION ── */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content { max-width: 800px; }
+    
+    .hero-tagline {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+    }
+
+    .hero-title em { font-style: italic; }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--muted-white);
+      max-width: 550px;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--white);
+      padding: 1.2rem 2.5rem;
+      border-radius: 3rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .btn:hover { 
+      background: var(--accent);
+      transform: translateY(-3px); 
+      box-shadow: 0 10px 30px rgba(210, 255, 31, 0.2);
+    }
+
+    /* ── LOGO PLACEHOLDERS ── */
+    .logos-section {
+      padding: 4rem 0;
+      border-top: 0.5px solid var(--border-color);
+      border-bottom: 0.5px solid var(--border-color);
+      background: var(--dark-grey);
+    }
+
+    .logo-headline {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4rem;
+    }
+
+    .logo-placeholder {
+      width: 140px;
+      height: 50px;
+      border: 1px dashed rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+    .logo-placeholder:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── PHILOSOPHY ── */
+    .philosophy { padding: 8rem 0; background: var(--black); }
+    
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: block;
+      font-weight: 500;
+    }
+
+    .philo-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+    }
+    .philo-title em { font-style: italic; }
+
+    .philo-text p {
+      font-size: 1rem;
+      color: var(--muted-white);
+      margin-bottom: 1.5rem;
+    }
+
+    .quote-box {
+      border-left: 2px solid var(--accent);
+      padding-left: 1.5rem;
+      margin-top: 2rem;
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--white);
+    }
+
+    /* ── SERVICES SECTION ── */
+    .services { padding: 8rem 0; background: var(--dark-grey); }
+    
+    .services-intro { margin-bottom: 4rem; }
+    .services-intro h2 {
+      font-family: var(--serif);
+      font-size: 3rem;
+      font-weight: 300;
+      margin-top: 0.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border: 0.5px solid var(--border-color);
+      border-radius: 2rem;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+    
+    .service-card:hover {
+      border-color: rgba(210, 255, 31, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .service-card-top h3 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      transition: color 0.3s ease;
+    }
+    
+    .service-card:hover .service-card-top h3 {
+      color: var(--accent);
+    }
+
+    .service-card-top p {
+      color: var(--muted-white);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .bullet-list { list-style: none; }
+    .bullet-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+      color: var(--white);
+    }
+    .bullet-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* ── CORE PROOF BAR ELEMENT ── */
+    .proof-bar-section {
+      background: var(--black);
+      padding: 6rem 0 2rem 0;
+      text-align: center;
+    }
+
+    .proof-headline {
+      font-family: var(--sans);
+      font-size: clamp(1.2rem, 2.5vw, 2.2rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 3.5rem;
+    }
+    .proof-headline span {
+      position: relative;
+      display: inline-block;
+    }
+    .proof-headline span::after {
+      content: '';
+      position: absolute;
+      bottom: -6px; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .proof-box {
+      background: var(--white);
+      color: var(--black);
+      padding: 3rem 2rem;
+      border-radius: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    .proof-box:hover {
+      background: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    .proof-number {
+      font-family: var(--sans);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .proof-label {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── CASE STUDIES SECTION ── */
+    .case-studies { padding: 6rem 0 8rem 0; background: var(--black); }
+    
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .case-study-box {
+      background: var(--dark-grey);
+      border: 0.5px solid var(--border-color);
+      border-radius: 2rem;
+      padding: 3.5rem 2.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+    
+    .case-header {
+      border-bottom: 0.5px solid var(--border-color);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      transition: var(--transition);
+    }
+
+    .case-client {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      transition: var(--transition);
+    }
+
+    .case-title {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    .case-body-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .case-subheading {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted-white);
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .case-text {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      transition: var(--transition);
+    }
+
+    .case-results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1.2rem;
+      border-radius: 1rem;
+      border: 0.5px solid var(--border-color);
+      margin-top: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .mini-result {
+      text-align: center;
+    }
+
+    .mini-num {
+      font-family: var(--sans);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent);
+      display: block;
+      transition: var(--transition);
+    }
+
+    .mini-label {
+      font-size: 0.65rem;
+      color: var(--muted-white);
+      transition: var(--transition);
+    }
+
+    /* Interactive Hover Effect */
+    .case-study-box:hover {
+      background: var(--white);
+      border-color: var(--white);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(255, 255, 255, 0.05);
+    }
+    
+    .case-study-box:hover .case-client { color: var(--black); font-weight: 600; }
+    .case-study-box:hover .case-title { color: var(--black); }
+    .case-study-box:hover .case-header { border-color: rgba(0, 0, 0, 0.1); }
+    .case-study-box:hover .case-subheading { color: rgba(0, 0, 0, 0.5); font-weight: 600; }
+    .case-study-box:hover .case-text { color: rgba(0, 0, 0, 0.85); }
+    
+    .case-study-box:hover .case-results-grid {
+      background: var(--black);
+      border-color: transparent;
+    }
+    .case-study-box:hover .mini-num { color: var(--accent); }
+    .case-study-box:hover .mini-label { color: rgba(255, 255, 255, 0.6); }
+
+    /* ── CONSULTATION CTA SECTION ── */
+    .consultation { 
+      padding: 10rem 0; 
+      background: var(--dark-grey); 
+      text-align: center;
+      border-top: 0.5px solid var(--border-color);
+    }
+    
+    .consultation-box {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    
+    .consultation-box h2 {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    
+    .consultation-box h2 em {
+      font-style: italic;
+    }
+    
+    .consultation-box p {
+      color: var(--muted-white);
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 4rem 0;
+      background: var(--black);
+      border-top: 0.5px solid var(--border-color);
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ── RESPONSIVE BREAKPOINTS ── */
+    @media (max-width: 1024px) {
+      .case-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .grid-2, .services-grid, .proof-grid { grid-template-columns: 1fr; gap: 2rem; }
+      nav { padding: 2rem 1.5rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <span class="nav-logo">Milow Studios</span>
+    <div class="nav-links">
+      <a href="#philosophy" class="nav-link">Philosophy</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#cases" class="nav-link">Case Studies</a>
+      <a href="#inquire" class="nav-link">Inquire</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-tagline">Boutique Personal Branding & Copywriting</p>
+        <h1 class="hero-title">It's time for copy that works just as <em>hard as you do</em>.</h1>
+        <p class="hero-desc">
+          As a business owner, you have a lot of assets—but time isn't one of them. We establish a constant premium presence for your brand, entirely without your day-to-day effort.
+        </p>
+        <a href="https://calendar.app.google/EmWAbzKcPHD4WxoG7" target="_blank" rel="noopener" class="btn">Inquire Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO PLACEHOLDERS -->
+  <section class="logos-section">
+    <div class="container">
+      <p class="logo-headline">Trusted by Industry Leaders & Premium Brands</p>
+      <div class="logo-grid">
+        <div class="logo-placeholder">Partner Logo 1</div>
+        <div class="logo-placeholder">Partner Logo 2</div>
+        <div class="logo-placeholder">Partner Logo 3</div>
+        <div class="logo-placeholder">Partner Logo 4</div>
+        <div class="logo-placeholder">Partner Logo 5</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy" id="philosophy">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="section-label">Our Philosophy</span>
+          <h2 class="philo-title">Time is your <em>highest asset</em>. We protect it.</h2>
+        </div>
+        <div class="philo-text">
+          <p>
+            You simply don't have the time to spend hours drafting top-tier advertising copy and shaping it into a tailored visual branding structure. Yet, you still want to leverage the maximum power of digital scaling.
+          </p>
+          <p>
+            Cold outreach is part of business—but what is more satisfying than genuine, organic <strong>inbound inquiries</strong> landing directly in your inbox?
+          </p>
+          <div class="quote-box">
+            "Perhaps an exquisite glass of wine looking out at a picturesque sunset. But while that won't directly hit your quarterly revenue targets—it's certainly the perfect way to celebrate them."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-intro">
+        <span class="section-label">Capabilities</span>
+        <h2>What We Do</h2>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card-top">
+            <h3>Social Media Marketing<br/><em>(Done-For-You)</em></h3>
+            <p>Complete organic growth management designed to turn empty corporate feeds into premium, identity-driven lead channels.</p>
+            <ul class="bullet-list">
+              <li><strong>LinkedIn Marketing:</strong> C-Level Ghostwriting to turn your profile into an active inbound lead engine.</li>
+              <li><strong>Instagram Marketing:</strong> Visually flawless digital curation targeted to reach high-net-worth audiences.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-top">
+            <h3>Online Marketing<br/><em>Consulting</em></h3>
+            <p>Bespoke strategic advisory sessions for companies who want to restructure internal workflows and audit their current digital pipelines.</p>
+            <ul class="bullet-list">
+              <li>Comprehensive technical audit of active landing pages and funnels.</li>
+              <li>Optimization of overall corporate positioning and content systems.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-top">
+            <h3>Newsletter<br/><em>Marketing</em></h3>
+            <p>Direct monetization strategies built for your most vital corporate asset: your customer email list.</p>
+            <ul class="bullet-list">
+              <li>Conversion copywriting written for high open-rates and maximum retention.</li>
+              <li>Conceptual design & implementation of automated backend lifecycle sales flows.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE PROOF BAR Element -->
+  <section class="proof-bar-section">
+    <div class="container">
+      <h3 class="proof-headline">What we've achieved <span>for our clients</span> overall:</h3>
+      <div class="proof-grid">
+        <div class="proof-box">
+          <span class="proof-number">2+ Million</span>
+          <span class="proof-label">Impressions</span>
+        </div>
+        <div class="proof-box">
+          <span class="proof-number">500'000+ CHF</span>
+          <span class="proof-label">Revenue Generated</span>
+        </div>
+        <div class="proof-box">
+          <span class="proof-number">up to 11x</span>
+          <span class="proof-label">ROI Tracked</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIPLE CASE STUDIES SECTION -->
+  <section class="case-studies" id="cases">
+    <div class="container">
+      <span class="section-label">Proven Results</span>
+      <h2 class="philo-title">Tracked <em>Success Stories</em></h2>
+      
+      <div class="case-grid">
+        
+        <!-- CASE 1: HUMAN RELATIONS -->
+        <div class="case-study-box">
+          <div>
+            <div class="case-header">
+              <span class="case-client">Human Relations GmbH</span>
+              <h4 class="case-title">Executive Personal Branding Engine</h4>
+            </div>
+            
+            <div class="case-body-section">
+              <h5 class="case-subheading">The Challenge</h5>
+              <p class="case-text">Managing Partner Roger Eberle wanted to access modern digital channels to acquire premium corporate clients, but lacked the operational time required to design assets and establish himself as a bilingual specialist.</p>
+            </div>
+
+            <div class="case-body-section">
+              <h5 class="case-subheading">Our Solution</h5>
+              <p class="case-text">Architected a comprehensive LinkedIn thought-leadership strategy. We overhauled his profile positioning, built persistent content flows to showcase successful client placements, and engineered high-value automated corporate lead magnets.</p>
+            </div>
+          </div>
+
+          <div class="case-results-grid">
+            <div class="mini-result">
+              <span class="mini-num">+672.8%</span>
+              <span class="mini-label">Impressions</span>
+            </div>
+            <div class="mini-result">
+              <span class="mini-num">+333%</span>
+              <span class="mini-label">Interactions</span>
+            </div>
+            <div class="mini-result">
+              <span class="mini-num">CHF 20K</span>
+              <span class="mini-label">In 3 Months</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE 2: TAMI MÖNNIG -->
+        <div class="case-study-box">
+          <div>
+            <div class="case-header">
+              <span class="case-client">Tami Mönnig Portfolio</span>
+              <h4 class="case-title">360° Content & Identity Architecture</h4>
+            </div>
+            
+            <div class="case-body-section">
+              <h5 class="case-subheading">The Challenge</h5>
+              <p class="case-text">Tami experienced severe constraints on her schedule, preventing her from updating or strategically driving her brand platform. Consequently, outreach volume, organic engagement metrics, and baseline revenue stagnated.</p>
+            </div>
+
+            <div class="case-body-section">
+              <h5 class="case-subheading">Our Solution</h5>
+              <p class="case-text">Re-engineered and refined the core content framework. We introduced structured content calendars to consistently drive high-quality organic visibility and implemented funnel entry-loops to systematically guide social followers onto her high-yielding private newsletter list.</p>
+            </div>
+          </div>
+
+          <div class="case-results-grid">
+            <div class="mini-result">
+              <span class="mini-num">612K+</span>
+              <span class="mini-label">Impressions</span>
+            </div>
+            <div class="mini-result">
+              <span class="mini-num">3'867</span>
+              <span class="mini-label">Engagement</span>
+            </div>
+            <div class="mini-result">
+              <span class="mini-num">€25K</span>
+              <span class="mini-label">In 4 Months</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE 3: NEWSLETTER MONETIZATION -->
+        <div class="case-study-box">
+          <div>
+            <div class="case-header">
+              <span class="case-client">Retention Systems</span>
+              <h4 class="case-title">Bespoke Editorial Newsletter Funnels</h4>
+            </div>
+            
+            <div class="case-body-section">
+              <h5 class="case-subheading">The Challenge</h5>
+              <p class="case-text">Boutique operators struggling to monetize captured email lists, resulting in high attrition rates, stagnant subscriber value, and reliance on heavily discounted outbound promotions.</p>
+            </div>
+
+            <div class="case-body-section">
+              <h5 class="case-subheading">Our Solution</h5>
+              <p class="case-text">Designed premium, high-relevance automated newsletter tracks. We implemented storytelling frameworks that increased open-rates and optimized click-to-open ratios (CTOR) via minimal, editorial style copy layouts.</p>
+            </div>
+          </div>
+
+          <div class="case-results-grid">
+            <div class="mini-result">
+              <span class="mini-num">64.7%</span>
+              <span class="mini-label">Opened Rate</span>
+            </div>
+            <div class="mini-result">
+              <span class="mini-num">17.6%</span>
+              <span class="mini-label">Clicked Rate</span>
+            </div>
+            <div class="mini-result">
+              <span class="mini-num">27.2%</span>
+              <span class="mini-label">CTOR Peak</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECT ACQUISITION CTA SECTION -->
+  <section class="consultation" id="inquire">
+    <div class="container">
+      <div class="consultation-box">
+        <span class="section-label">Let's Talk Strategy</span>
+        <h2>Ready to hand over your digital channels to a <em>trusted partner</em>?</h2>
+        <p>Book a private initial alignment briefing below to outline your channel ecosystem, define baseline targets, and discuss full custom onboarding capabilities.</p>
+        <a href="https://calendar.app.google/EmWAbzKcPHD4WxoG7" target="_blank" rel="noopener" class="btn">Inquire Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Milow Studios. All rights reserved. Designed remotely with ❤️.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
