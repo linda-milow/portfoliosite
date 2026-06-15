@@ -24,6 +24,10 @@
       --transition: 0.4s cubic-bezier(0.25, 1, 0.3, 1);
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: var(--black);
       color: var(--white);
@@ -129,32 +133,20 @@
       box-shadow: 0 10px 30px rgba(210, 255, 31, 0.2);
     }
 
- <!-- LOGO PARTNERS SECTION -->
-  <section class="logos-section">
-    <div class="container">
-      <p class="logo-headline" style="text-align: center; margin-bottom: 3.5rem;">Trusted by Industry Leaders & Premium Brands</p>
-      <div class="logo-grid" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 3.5rem 5rem; max-width: 1000px; margin: 0 auto;">
-        <div class="logo-item"><img src="2.png" alt="Partner Logo" style="max-width: 130px; max-height: 45px; width: auto; height: auto; object-fit: contain; filter: grayscale(1);"></div>
-        <div class="logo-item"><img src="3.png" alt="Partner Logo" style="max-width: 130px; max-height: 45px; width: auto; height: auto; object-fit: contain; filter: grayscale(1);"></div>
-        <div class="logo-item"><img src="4.png" alt="Partner Logo" style="max-width: 130px; max-height: 45px; width: auto; height: auto; object-fit: contain; filter: grayscale(1);"></div>
-        <div class="logo-item"><img src="5.png" alt="Partner Logo" style="max-width: 130px; max-height: 45px; width: auto; height: auto; object-fit: contain; filter: grayscale(1);"></div>
-        <div class="logo-item"><img src="6.png" alt="Partner Logo" style="max-width: 130px; max-height: 45px; width: auto; height: auto; object-fit: contain; filter: grayscale(1);"></div>
-        <div class="logo-item"><img src="7.png" alt="Partner Logo" style="max-width: 130px; max-height: 45px; width: auto; height: auto; object-fit: contain; filter: grayscale(1);"></div>
-        <div class="logo-item"><img src="8.png" alt="Partner Logo" style="max-width: 130px; max-height: 45px; width: auto; height: auto; object-fit: contain; filter: grayscale(1);"></div>
-        <div class="logo-item"><img src="9.png" alt="Partner Logo" style="max-width: 130px; max-height: 45px; width: auto; height: auto; object-fit: contain; filter: grayscale(1);"></div>
-        <div class="logo-item"><img src="10.png" alt="Partner Logo" style="max-width: 130px; max-height: 45px; width: auto; height: auto; object-fit: contain; filter: grayscale(1);"></div>
-      </div>
-    </div>
-  </section>
+    /* ── HELLE LOGO PARTNERS SECTION ── */
+    .logos-section {
+      padding: 5rem 0;
+      background: var(--white); /* Heller Hintergrund für schwarze Logos */
     }
 
     .logo-headline {
-      font-size: 0.65rem;
+      font-size: 0.7rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
+      color: rgba(0, 0, 0, 0.5); /* Dunklerer Text auf hellem Grund */
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 3.5rem;
+      font-weight: 500;
     }
 
     .logo-grid {
@@ -162,26 +154,31 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 4rem;
+      gap: 3.5rem 5rem;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .logo-placeholder {
-      width: 140px;
-      height: 50px;
-      border: 1px dashed rgba(255,255,255,0.15);
+    .logo-item {
       display: flex;
-      align-items: center;
       justify-content: center;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-      border-radius: 4px;
+      align-items: center;
+    }
+
+    .logo-item img {
+      max-width: 130px;
+      max-height: 45px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      /* Dezente Transparenz für einen edlen Look, wird beim Hover voll sichtbar */
+      opacity: 0.7; 
       transition: var(--transition);
     }
-    .logo-placeholder:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+
+    .logo-item img:hover {
+      opacity: 1;
+      transform: scale(1.03);
     }
 
     /* ── PHILOSOPHY ── */
@@ -532,7 +529,6 @@
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav>
     <span class="nav-logo">Milow Studios</span>
     <div class="nav-links">
@@ -543,7 +539,6 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
@@ -557,21 +552,23 @@
     </div>
   </section>
 
-  <!-- LOGO PLACEHOLDERS -->
   <section class="logos-section">
     <div class="container">
       <p class="logo-headline">Trusted by Industry Leaders & Premium Brands</p>
       <div class="logo-grid">
-        <div class="logo-placeholder">Partner Logo 1</div>
-        <div class="logo-placeholder">Partner Logo 2</div>
-        <div class="logo-placeholder">Partner Logo 3</div>
-        <div class="logo-placeholder">Partner Logo 4</div>
-        <div class="logo-placeholder">Partner Logo 5</div>
+        <div class="logo-item"><img src="2.png" alt="Partner Logo 2"></div>
+        <div class="logo-item"><img src="3.png" alt="Partner Logo 3"></div>
+        <div class="logo-item"><img src="4.png" alt="Partner Logo 4"></div>
+        <div class="logo-item"><img src="5.png" alt="Partner Logo 5"></div>
+        <div class="logo-item"><img src="6.png" alt="Partner Logo 6"></div>
+        <div class="logo-item"><img src="7.png" alt="Partner Logo 7"></div>
+        <div class="logo-item"><img src="8.png" alt="Partner Logo 8"></div>
+        <div class="logo-item"><img src="9.png" alt="Partner Logo 9"></div>
+        <div class="logo-item"><img src="10.png" alt="Partner Logo 10"></div>
       </div>
     </div>
   </section>
 
-  <!-- PHILOSOPHY -->
   <section class="philosophy" id="philosophy">
     <div class="container">
       <div class="grid-2">
@@ -594,7 +591,6 @@
     </div>
   </section>
 
-  <!-- SERVICES GRID -->
   <section class="services" id="services">
     <div class="container">
       <div class="services-intro">
@@ -639,7 +635,6 @@
     </div>
   </section>
 
-  <!-- CORE PROOF BAR Element -->
   <section class="proof-bar-section">
     <div class="container">
       <h3 class="proof-headline">What we've achieved <span>for our clients</span> overall:</h3>
@@ -660,7 +655,6 @@
     </div>
   </section>
 
-  <!-- TRIPLE CASE STUDIES SECTION -->
   <section class="case-studies" id="cases">
     <div class="container">
       <span class="section-label">Proven Results</span>
@@ -668,7 +662,6 @@
       
       <div class="case-grid">
         
-        <!-- CASE 1: HUMAN RELATIONS -->
         <div class="case-study-box">
           <div>
             <div class="case-header">
@@ -703,7 +696,6 @@
           </div>
         </div>
 
-        <!-- CASE 2: TAMI MÖNNIG -->
         <div class="case-study-box">
           <div>
             <div class="case-header">
@@ -738,7 +730,6 @@
           </div>
         </div>
 
-        <!-- CASE 3: NEWSLETTER MONETIZATION -->
         <div class="case-study-box">
           <div>
             <div class="case-header">
@@ -777,7 +768,6 @@
     </div>
   </section>
 
-  <!-- DIRECT ACQUISITION CTA SECTION -->
   <section class="consultation" id="inquire">
     <div class="container">
       <div class="consultation-box">
@@ -789,7 +779,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <p>&copy; 2026 Milow Studios. All rights reserved. Designed remotely with ❤️.</p>
