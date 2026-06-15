@@ -35,64 +35,11 @@
       flex-direction: column;
     }
 
-    /* ── HEADER NAVIGATION ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 200;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2.5rem;
-      padding: 2rem 3rem;
-    }
-
-    .nav-logo {
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-right: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-link {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .nav-link:hover { color: var(--white); }
-
-    .nav-icon {
-      margin-left: auto;
-      display: flex;
-      gap: 4px;
-      width: 16px;
-      height: 16px;
-      flex-wrap: wrap;
-      cursor: pointer;
-    }
-    .nav-icon span {
-      width: 6px;
-      height: 6px;
-      background: rgba(255,255,255,0.7);
-      display: inline-block;
-    }
-
     /* ── CARDS GALLERY CONTAINER ── */
     .gallery-wrapper {
       flex: 1;
       display: flex;
-      padding: 6.5rem 1.5rem 2rem 1.5rem;
+      padding: 2rem 1.5rem 2rem 1.5rem; /* Padding oben verringert, da Nav weg ist */
       height: 100vh;
       width: 100vw;
     }
@@ -256,9 +203,7 @@
     /* ── MOBILE ACCORDION BREAKPOINT ── */
     @media (max-width: 768px) {
       html, body { overflow: auto; height: auto; }
-      nav { position: relative; padding: 2rem 1.5rem; justify-content: space-between; }
-      .nav-links { display: none; }
-      .gallery-wrapper { padding: 0 1rem 2rem 1rem; height: auto; }
+      .gallery-wrapper { padding: 1.5rem 1rem 2rem 1rem; height: auto; }
       .cards { flex-direction: column; height: auto; gap: 1.5rem; }
       .card { flex: none !important; height: 65vh; border-radius: 2.5rem; }
       .cards:has(.card:hover) .card { flex: none; height: 65vh; }
@@ -271,22 +216,10 @@
 </head>
 <body>
 
-  <nav>
-    <span class="nav-logo">Milow Studios®</span>
-    <div class="nav-links">
-      <a href="#" class="nav-link">Portfolio</a>
-      <a href="#" class="nav-link">Projects</a>
-      <a href="#" class="nav-link">Services</a>
-      <a href="#" class="nav-link">Get In Touch</a>
-    </div>
-    <div class="nav-icon">
-      <span></span><span></span><span></span><span></span>
-    </div>
-  </nav>
-
   <div class="gallery-wrapper">
     <div class="cards">
 
+      <!-- CARD 1: ABOUT -->
       <div class="card" id="card-about">
         <div class="card-bg"></div>
         <video class="card-video" src="https://assets.mixkit.co/videos/preview/mixkit-woman-posing-in-neon-light-42312-large.mp4" loop muted playsinline></video>
@@ -307,6 +240,7 @@
         </div>
       </div>
 
+      <!-- CARD 2: MARKETING -->
       <div class="card" id="card-marketing">
         <div class="card-bg"></div>
         <video class="card-video" src="https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-with-a-blue-sky-43187-large.mp4" loop muted playsinline></video>
@@ -334,6 +268,7 @@
         </div>
       </div>
 
+      <!-- CARD 3: SHE SHAPES -->
       <div class="card" id="card-she-shapes">
         <div class="card-bg"></div>
         <video class="card-video" src="https://assets.mixkit.co/videos/preview/mixkit-rotating-tech-device-pod-41566-large.mp4" loop muted playsinline></video>
@@ -354,6 +289,7 @@
         </div>
       </div>
 
+      <!-- CARD 4: LINKS & PROJECTS (Angepasst) -->
       <div class="card" id="card-links">
         <div class="card-bg"></div>
         <video class="card-video" src="https://assets.mixkit.co/videos/preview/mixkit-extreme-close-up-of-womans-lips-blinking-43112-large.mp4" loop muted playsinline></video>
@@ -362,18 +298,19 @@
           <h2 class="card-title">Links &<br /><em>Projects.</em></h2>
           <div class="card-expanded">
             <p class="card-desc">
-              Being a personal brand means being visible. Here, you can find podcast appereances, interviews and more.
+              Being a personal brand means being visible. Soon, you can find here podcast appereances, interviews and more.
             </p>
             <div class="card-tags">
               <span class="tag">Personal Brand</span>
               <span class="tag">Podcasts</span>
               <span class="tag">Projects</span>
             </div>
-            <a href="links.html" class="card-cta">Explore more →</a>
+            <!-- CTA wurde entfernt -->
           </div>
         </div>
       </div>
 
+      <!-- CARD 5: PHOTOGRAPHY -->
       <div class="card" id="card-photography">
         <div class="card-bg"></div>
         <video class="card-video" src="https://assets.mixkit.co/videos/preview/mixkit-headlights-of-a-car-parked-underground-42791-large.mp4" loop muted playsinline></video>
