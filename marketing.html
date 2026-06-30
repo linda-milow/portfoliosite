@@ -136,27 +136,32 @@
 
     /* ── HELLE LOGO PARTNERS SECTION ── */
     .logos-section {
-      padding: 5rem 0;
+      padding: 6rem 0;
       background: var(--white);
     }
 
     .logo-headline {
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(0, 0, 0, 0.5);
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--black);
       text-align: center;
-      margin-bottom: 3.5rem;
-      font-weight: 500;
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      letter-spacing: -0.01em;
     }
 
+    .logo-headline em {
+      font-style: italic;
+    }
+
+    /* Raster-Struktur via CSS Grid */
     .logo-grid {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 3.5rem 5rem;
-      max-width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr); /* 8 Spalten auf Desktop (2 Zeilen) */
+      gap: 3.5rem 2rem;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
@@ -167,18 +172,20 @@
     }
 
     .logo-item img {
-      max-width: 130px;
+      max-width: 100%;
       max-height: 45px;
       width: auto;
       height: auto;
       object-fit: contain;
-      opacity: 0.7; 
+      opacity: 0.75; 
+      filter: grayscale(100%);
       transition: var(--transition);
     }
 
     .logo-item img:hover {
       opacity: 1;
-      transform: scale(1.03);
+      filter: grayscale(0%);
+      transform: scale(1.05);
     }
 
     /* ── PHILOSOPHY ── */
@@ -524,6 +531,12 @@
       .grid-2, .services-grid, .proof-grid { grid-template-columns: 1fr; gap: 2rem; }
       nav { padding: 2rem 1.5rem; }
       .nav-links { display: none; }
+      
+      /* Mobile Breakpoint für das 4x4 Logo-Raster */
+      .logo-grid {
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 2.5rem 1rem;
+      }
     }
   </style>
 </head>
@@ -554,7 +567,7 @@
 
   <section class="logos-section">
     <div class="container">
-      <p class="logo-headline">Trusted by Industry Leaders & Premium Brands</p>
+      <h2 class="logo-headline">Our clients are <em>the best</em> at what they do. We help them being <em>even better</em>.</h2>
       <div class="logo-grid">
         <div class="logo-item"><img src="2.png" alt="Partner Logo 2"></div>
         <div class="logo-item"><img src="3.png" alt="Partner Logo 3"></div>
@@ -565,6 +578,13 @@
         <div class="logo-item"><img src="8.png" alt="Partner Logo 8"></div>
         <div class="logo-item"><img src="9.png" alt="Partner Logo 9"></div>
         <div class="logo-item"><img src="10.png" alt="Partner Logo 10"></div>
+        <div class="logo-item"><img src="12.png" alt="Partner Logo 12"></div>
+        <div class="logo-item"><img src="13.png" alt="Partner Logo 13"></div>
+        <div class="logo-item"><img src="14.png" alt="Partner Logo 14"></div>
+        <div class="logo-item"><img src="15.png" alt="Partner Logo 15"></div>
+        <div class="logo-item"><img src="16.png" alt="Partner Logo 16"></div>
+        <div class="logo-item"><img src="17.png" alt="Partner Logo 17"></div>
+        <div class="logo-item"><img src="18.png" alt="Partner Logo 18"></div>
       </div>
     </div>
   </section>
