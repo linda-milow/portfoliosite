@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz — Linda Milow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #000000;
+      --card-bg-dark: #080808;
+      --white: #f7f6f4;
+      --muted-white: rgba(255, 255, 255, 0.55);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 3rem;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 0.5px solid var(--border-color);
+    }
+
+    .nav-logo {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .nav-back {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted-white);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-back:hover { color: var(--white); }
+
+    main {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 6rem 2rem 10rem;
+    }
+
+    .page-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted-white);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      margin-bottom: 4rem;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 1.8rem;
+      margin-top: 4rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    p, li { 
+      margin-bottom: 1.2rem; 
+      color: var(--muted-white); 
+    }
+
+    strong {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+
+    a.inline { 
+      color: var(--white); 
+      text-decoration: none;
+      border-bottom: 0.5px solid rgba(255,255,255,0.3);
+      padding-bottom: 1px;
+      transition: opacity 0.2s;
+    }
+    a.inline:hover { opacity: 0.7; }
+
+    .divider {
+      width: 3rem;
+      height: 0.5px;
+      background: var(--border-color);
+      margin: 4rem 0;
+    }
+
+    footer {
+      padding: 3rem;
+      text-align: center;
+      border-top: 0.5px solid var(--border-color);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--muted-white);
+      text-transform: uppercase;
+    }
+
+    footer a {
+      color: var(--muted-white);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--white); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.5rem; }
+      main { padding: 4rem 1.5rem 6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Milow Studios®</a>
+    <a href="index.html" class="nav-back">← Back to site</a>
+  </nav>
+
+  <main>
+    <p class="page-label">Legal</p>
+    <h1>Datenschutz</h1>
+
+    <p>Verantwortliche Stelle im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:</p>
+    <p>
+      Linda Kalberer<br />
+      Chammweg 1<br />
+      9602 Bazenheid<br />
+      Telefon: 079 129 54 95<br />
+      E-Mail: <a class="inline" href="mailto:linda@milowstudios.ch">linda@milowstudios.ch</a>
+    </p>
+
+    <h2>Allgemeiner Hinweis</h2>
+    <p>Gestützt auf Artikel 13 der schweizerischen Bundesverfassung und den datenschutzrechtlichen Bestimmungen des Bundes (Datenschutzgesetz, DSG) hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+    <p>In Zusammenarbeit mit unseren Hosting-Providern bemühen wir uns, die Datenbanken so gut wie möglich vor fremden Zugriffen, Verlusten, Missbrauch oder vor Fälschung zu schützen.</p>
+    <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+    <p>Durch die Nutzung dieser Website erklären Sie sich mit der Erhebung, Verarbeitung und Nutzung von Daten gemäss der nachfolgenden Beschreibung einverstanden.</p>
+
+    <h2>Bearbeitung von Personendaten</h2>
+    <p>Personendaten sind alle Angaben, die sich auf eine bestimmte oder bestimmbare Person beziehen. Wir bearbeiten Personendaten im Einklang mit dem schweizerischen Datenschutzrecht sowie — soweit anwendbar — gemäss Art. 6 Abs. 1 DSGVO, gestützt auf folgende Rechtsgrundlagen:</p>
+    <ul>
+      <li>Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)</li>
+      <li>Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 lit. b DSGVO)</li>
+      <li>Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO)</li>
+      <li>Schutz lebenswichtiger Interessen (Art. 6 Abs. 1 lit. d DSGVO)</li>
+      <li>Berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO)</li>
+    </ul>
+    <p>Wir bearbeiten Personendaten für jene Dauer, die für den jeweiligen Zweck erforderlich ist.</p>
+
+    <h2>Sicherheitsmassnahmen</h2>
+    <p>Wir treffen nach Massgabe der gesetzlichen Vorgaben geeignete technische und organisatorische Massnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten — insbesondere zur Sicherung der Vertraulichkeit, Integrität und Verfügbarkeit von Daten.</p>
+
+    <h2>Übermittlung von personenbezogenen Daten und Drittländer</h2>
+    <p>Im Rahmen unserer Verarbeitung kann es vorkommen, dass Daten an andere Stellen oder Dienstleister übermittelt werden (z.B. mit IT-Aufgaben beauftragte Anbieter). Sofern wir Daten in einem Drittland (ausserhalb EU/EWR) verarbeiten, erfolgt dies nur im Einklang mit den gesetzlichen Vorgaben (Art. 44–49 DSGVO).</p>
+
+    <h2>Cookies</h2>
+    <p>Diese Website verwendet Cookies — Textdateien, die Daten von besuchten Websites enthalten und vom Browser gespeichert werden. Wir unterscheiden zwischen temporären (Session-) Cookies und permanenten Cookies sowie First- und Third-Party-Cookies. Notwendige Cookies sind für den Betrieb der Website erforderlich; Statistik-, Marketing- und Personalisierungs-Cookies dienen der Reichweitenmessung und Inhaltsoptimierung.</p>
+    <p>Sie können der Nutzung von Cookies jederzeit über Ihre Browser-Einstellungen widersprechen (Opt-Out), wobei dies die Funktionalität der Website einschränken kann.</p>
+    <p>Speicherdauer: Sofern keine expliziten Angaben gemacht werden, kann die Speicherdauer permanenter Cookies bis zu zwei Jahre betragen.</p>
+
+    <h2>SSL-/TLS-Verschlüsselung</h2>
+    <p>Diese Website nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung für die Übertragung vertraulicher Inhalte. Eine verschlüsselte Verbindung erkennen Sie am "https://" in der Adresszeile sowie am Schloss-Symbol im Browser.</p>
+
+    <h2>Kontaktformular</h2>
+    <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben zwecks Bearbeitung der Anfrage und für Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+
+    <h2>Newsletterdaten</h2>
+    <p>Wenn Sie den angebotenen Newsletter beziehen möchten, benötigen wir Ihre E-Mail-Adresse sowie eine Bestätigung, dass Sie der Inhaber dieser Adresse sind und dem Empfang zustimmen. Diese Daten verwenden wir ausschliesslich für den Versand des Newsletters. Sie können Ihre Einwilligung jederzeit widerrufen, etwa über den Austragen-Link im Newsletter.</p>
+
+    <h2>Rechte betroffener Personen</h2>
+    <p>Jede betroffene Person hat das Recht auf Bestätigung, Auskunft, Berichtigung, Löschung ("Recht auf Vergessenwerden"), Einschränkung der Verarbeitung, Datenübertragbarkeit, Widerspruch sowie Widerruf einer erteilten Einwilligung. Zur Ausübung dieser Rechte können Sie sich jederzeit an die oben genannte verantwortliche Person wenden.</p>
+
+    <h2>Instagram</h2>
+    <p>Auf unserer Website sind Funktionen des Dienstes Instagram (Instagram Inc., Menlo Park, CA, USA) eingebunden. Wenn Sie in Ihrem Instagram-Account eingeloggt sind, können Inhalte unserer Seiten mit Ihrem Profil verlinkt werden — Instagram kann dadurch den Besuch unserer Seiten Ihrem Konto zuordnen. Weitere Informationen: <a class="inline" href="http://instagram.com/about/legal/privacy/" target="_blank" rel="noopener">Datenschutzerklärung von Instagram</a>.</p>
+
+    <h2>Urheberrechte</h2>
+    <p>Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website gehören ausschliesslich dem Betreiber dieser Website oder den speziell genannten Rechteinhabern.</p>
+
+    <h2>Allgemeiner Haftungsausschluss</h2>
+    <p>Alle Angaben unseres Internetangebotes wurden sorgfältig geprüft. Trotzdem kann das Auftreten von Fehlern nicht völlig ausgeschlossen werden, womit wir keine Garantie für Vollständigkeit, Richtigkeit und Aktualität übernehmen können. Die Nutzung bzw. der Zugang zu dieser Website geschieht auf eigene Gefahr des Besuchers.</p>
+
+    <h2>Änderungen</h2>
+    <p>Wir können diese Datenschutzerklärung jederzeit ohne Vorankündigung anpassen. Es gilt die jeweils aktuelle, auf unserer Website publizierte Fassung.</p>
+
+    <h2>Fragen an den Datenschutzbeauftragten</h2>
+    <p>Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an <a class="inline" href="mailto:linda@milowstudios.ch">linda@milowstudios.ch</a>.</p>
+
+    <div class="divider"></div>
+    <p style="font-size: 0.75rem; color: var(--muted-white);">Quelle: SwissAnwalt</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Milow Studios — <a href="imprint.html">Impressum</a> · <a href="data-policy.html">Datenschutz</a> · <a href="terms.html">AGB</a></p>
+  </footer>
+
+</body>
+</html>
