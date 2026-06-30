@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum — Linda Milow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #000000;
+      --card-bg-dark: #080808;
+      --white: #f7f6f4;
+      --muted-white: rgba(255, 255, 255, 0.55);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 3rem;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 0.5px solid var(--border-color);
+    }
+
+    .nav-logo {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .nav-back {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted-white);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-back:hover { color: var(--white); }
+
+    main {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 6rem 2rem 10rem;
+    }
+
+    .page-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted-white);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      margin-bottom: 4rem;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 1.8rem;
+      margin-top: 4rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.01em;
+    }
+
+    p, li { 
+      margin-bottom: 1.2rem; 
+      color: var(--muted-white); 
+    }
+
+    strong {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    a.inline { 
+      color: var(--white); 
+      text-decoration: none;
+      border-bottom: 0.5px solid rgba(255,255,255,0.3);
+      padding-bottom: 1px;
+      transition: opacity 0.2s;
+    }
+    a.inline:hover { opacity: 0.7; }
+
+    .divider {
+      width: 3rem;
+      height: 0.5px;
+      background: var(--border-color);
+      margin: 4rem 0;
+    }
+
+    footer {
+      padding: 3rem;
+      text-align: center;
+      border-top: 0.5px solid var(--border-color);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--muted-white);
+      text-transform: uppercase;
+    }
+
+    footer a {
+      color: var(--muted-white);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--white); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.5rem; }
+      main { padding: 4rem 1.5rem 6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Milow Studios®</a>
+    <a href="index.html" class="nav-back">← Back to site</a>
+  </nav>
+
+  <main>
+    <p class="page-label">Legal</p>
+    <h1>Impressum</h1>
+
+    <p><strong>Kontakt-Adresse</strong></p>
+    <p>
+      Milow Studios GmbH<br />
+      Linda Kalberer<br />
+      Chammweg 1<br />
+      9602 Bazenheid<br />
+      Schweiz
+    </p>
+    <p>E-Mail: <a class="inline" href="mailto:linda@milowstudios.ch">linda@milowstudios.ch</a></p>
+
+    <div class="divider"></div>
+
+    <h2>Haftungsausschluss</h2>
+    <p>Der Autor übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen.</p>
+    <p>Haftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden ausgeschlossen.</p>
+    <p>Alle Angebote sind unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne besondere Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.</p>
+
+    <h2>Haftungsausschluss für Links</h2>
+    <p>Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher Webseiten erfolgen auf eigene Gefahr des jeweiligen Nutzers.</p>
+
+    <h2>Urheberrechte</h2>
+    <p>Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website, gehören ausschliesslich Linda Kalberer oder den speziell genannten Rechteinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung des Urheberrechtsträgers im Voraus einzuholen.</p>
+
+    <div class="divider"></div>
+    <p style="font-size: 0.75rem; color: var(--muted-white);">Quelle: SwissAnwalt</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Milow Studios — <a href="imprint.html">Impressum</a> · <a href="data-policy.html">Datenschutz</a> · <a href="terms.html">AGB</a></p>
+  </footer>
+
+</body>
+</html>
